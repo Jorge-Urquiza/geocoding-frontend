@@ -61,7 +61,7 @@ npm run dev
 4. Abrir en navegador la URL que imprima Vite (por defecto suele ser `http://localhost:5173`).
 
 
-## Decisiones tecnicas clave
+## Decisiones tecnicas
 
 - Arquitectura por capas: UI en componentes, flujo en `GeocodingPage`, API en `services/geocodingApi.ts`.
 - Busqueda eficiente: debounce de `400ms`, minimo de 2 caracteres y cancelacion con `AbortController`.
@@ -69,7 +69,7 @@ npm run dev
 - Errores separados: mensajes independientes para busqueda y reverse geocoding.
 - Configuracion de entorno: `API_BASE_URL` se inyecta en build desde `vite.config.ts`.
 
-## Recomendaciones
+## Recomendaciones/mejoras futuras
 
 - Pruebas: unitarias para los `services` y logica de busqueda y al menos un E2E del flujo completo con `Playwright`.
 - Estado global: considerar `Zustand` solo si aparece estado compartido entre varias pantallas (filtros globales, preferencias, historial, auth etc.). Para el alcance actual no aplica.
